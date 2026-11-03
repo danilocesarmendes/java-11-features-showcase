@@ -1,23 +1,23 @@
 # Java 11 Features Showcase
 
-Este módulo demonstra as principais novidades introduzidas no Java 11 (LTS).
+This module demonstrates the main features introduced in Java 11 (LTS).
 
-O objetivo é apresentar exemplos simples, claros e práticos das evoluções da linguagem em relação ao Java 8.
+The goal is to present simple, clear and practical examples of how the language evolved compared to Java 8.
 
 ---
 
-## 🚀 Principais Features Demonstradas
+## 🚀 Main Features Demonstrated
 
-### 1️⃣ var em parâmetros de lambda
-Permite inferência de tipo também em parâmetros de expressões lambda.
+### 1️⃣ var in lambda parameters
+Allows type inference in lambda expression parameters as well.
 
 ```java
-nomes.forEach((var nome) -> System.out.println(nome));
+names.forEach((var name) -> System.out.println(name));
 ```
 
 ---
 
-### 2️⃣ Novos métodos da classe String
+### 2️⃣ New String methods
 
 - `isBlank()`
 - `strip()`
@@ -25,8 +25,8 @@ nomes.forEach((var nome) -> System.out.println(nome));
 - `repeat()`
 
 ```java
-String texto = "  Java 11  ";
-System.out.println(texto.strip());
+String text = "  Java 11  ";
+System.out.println(text.strip());
 System.out.println("=".repeat(10));
 ```
 
@@ -34,33 +34,33 @@ System.out.println("=".repeat(10));
 
 ### 3️⃣ Optional.isEmpty()
 
-Melhoria para leitura mais expressiva.
+A more expressive way to check for an empty value.
 
 ```java
-Optional<String> nome = Optional.empty();
+Optional<String> name = Optional.empty();
 
-if (nome.isEmpty()) {
-    System.out.println("Optional vazio");
+if (name.isEmpty()) {
+    System.out.println("Empty Optional");
 }
 ```
 
 ---
 
-### 4️⃣ Files.readString() e writeString()
+### 4️⃣ Files.readString() and Files.writeString()
 
-Leitura e escrita simplificada de arquivos.
+Simplified reading and writing of text files.
 
 ```java
 Path path = Path.of("arquivo.txt");
 Files.writeString(path, "Hello Java 11");
-String conteudo = Files.readString(path);
+String content = Files.readString(path);
 ```
 
 ---
 
-### 5️⃣ Nova API HttpClient
+### 5️⃣ New HttpClient API
 
-Substitui a antiga HttpURLConnection.
+Replaces the old `HttpURLConnection`.
 
 ```java
 HttpClient client = HttpClient.newHttpClient();
@@ -76,17 +76,17 @@ HttpResponse<String> response =
 
 ---
 
-## 📌 Requisitos
+## 📌 Requirements
 
 - Java 11+
-- Maven ou Gradle (opcional)
+- Maven or Gradle (optional)
 
 ---
 
-## 🎯 Objetivo
+## 🎯 Goal
 
-Este projeto serve como:
+This project serves as:
 
-- Atualização para quem vem do Java 8
-- Base para entrevistas técnicas
-- Referência rápida das melhorias da LTS 11
+- A refresher for developers coming from Java 8
+- A base for technical interview preparation
+- A quick reference for the improvements in the Java 11 LTS
